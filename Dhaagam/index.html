@@ -4,10 +4,32 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Dhaagam Goli Soda</title>
-        <meta name="description" content="">
+        <!-- Meta Description -->
+        <meta name="description" content="Dhaagam is a unique flavoured taste for GoliSoda. Specializing in visual storytelling, entertainment, and ads.">
+
+        <!-- Meta Keywords (less important, but okay to include) -->
+        <meta name="keywords" content="dhaagam, golisoda, falovours, summer, taste golisoda, soda, visual storytelling, treat, entertainment,
+         ads, unique flavours, dhaagam golisoda, summer refreshment, dhaagam soda, dhaagam golisoda flavours, dhaagam goli soda, 
+         dhaagam soda flavours, dhaagam golisoda taste, dhaagam summer soda, dhaagam goli soda refreshment, dhaagam soda experience,
+        dhaagam golisoda experience, dhaagam goli soda flavours, dhaagam soda taste, dhaagam golisoda summer refreshment, 
+        dhaagam goli soda unique flavours, dhaagam soda summer refreshment, dhaagam golisoda unique flavours, 
+        dhaagam goli soda entertainment, dhaagam soda entertainment, dhaagam golisoda ads, dhaagam goli soda ads">
+
+        <!-- Viewport for responsiveness -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<<<<<<< HEAD
+        <meta property="og:title" content="Dhaagam - A Golisoda Company" />
+        <meta property="og:description" content="Explore Dhaagam’s creative works in Goli Soda." />
+        <meta property="og:image" content="https://dhaagam.in/logo.jpg" />
+        <meta property="og:url" content="https://dhaagam.in/" />
+        <meta property="og:type" content="website" />
+
+
+		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+=======
         <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+>>>>>>> 92c298d36e1acc84e507156ab992317bf91b0df8
         <!-- Place favicon.ico in the root directory -->
 
         <!-- CSS here -->
@@ -1146,5 +1168,34 @@
         <script>
             SVGInject(document.querySelectorAll("img.injectable"));
         </script>
+        <script>
+  // Disable right click
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+
+  // Disable text selection
+  document.addEventListener('selectstart', function(e) {
+    e.preventDefault();
+  });
+
+  // Disable drag (images, text, etc.)
+  document.addEventListener('dragstart', function(e) {
+    e.preventDefault();
+  });
+
+  // Disable common keyboard shortcuts
+  document.addEventListener('keydown', function(e) {
+    // Ctrl+U, Ctrl+C, Ctrl+S, Ctrl+Shift+I, F12
+    if (
+      (e.ctrlKey && ['u', 'U', 's', 'S', 'c', 'C'].includes(e.key)) ||
+      (e.ctrlKey && e.shiftKey && ['I', 'i', 'J', 'j'].includes(e.key)) ||
+      e.key === 'F12'
+    ) {
+      e.preventDefault();
+    }
+  });
+</script>
+
     </body>
 </html>
