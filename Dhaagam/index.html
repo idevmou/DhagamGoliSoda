@@ -698,5 +698,33 @@
         <script>
             SVGInject(document.querySelectorAll("img.injectable"));
         </script>
+        <script>
+  // Disable right click
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+
+  // Disable text selection
+  document.addEventListener('selectstart', function(e) {
+    e.preventDefault();
+  });
+
+  // Disable drag (images, text, etc.)
+  document.addEventListener('dragstart', function(e) {
+    e.preventDefault();
+  });
+
+  // Disable common keyboard shortcuts
+  document.addEventListener('keydown', function(e) {
+    // Ctrl+U, Ctrl+C, Ctrl+S, Ctrl+Shift+I, F12
+    if (
+      (e.ctrlKey && ['u', 'U', 's', 'S', 'c', 'C'].includes(e.key)) ||
+      (e.ctrlKey && e.shiftKey && ['I', 'i', 'J', 'j'].includes(e.key)) ||
+      e.key === 'F12'
+    ) {
+      e.preventDefault();
+    }
+  });
+</script>
     </body>
 </html>
