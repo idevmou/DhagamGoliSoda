@@ -1,16 +1,8 @@
-// const scriptURL = 'https://script.google.com/macros/s/AKfycbxNIevczIIa0bG6KoVj7K8WJ0VtZrNs8Lxgngl9lXX-nT8T62j0MNr83mGDcnHBZ0oJ/exec'
+// Important: This script handles form submission to a Google Apps Script endpoint.
+// Ensure you have the correct script URL and that your Google Apps Script is set up to handle
+// form submissions correctly.
+// It should be always handled by developers with knowledge of Google Apps Script.
 
-// const form = document.forms['contact-form']
-
-// form.addEventListener('submit', e => {
-  
-//   e.preventDefault()
-  
-//   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-//   .then(response => alert("Thank you! Form is submitted" ))
-//   .then(() => { window.location.reload(); })
-//   .catch(error => console.error('Error!', error.message))
-// })
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbxNIevczIIa0bG6KoVj7K8WJ0VtZrNs8Lxgngl9lXX-nT8T62j0MNr83mGDcnHBZ0oJ/exec';
 const form = document.forms['contact-form'];
