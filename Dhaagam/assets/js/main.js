@@ -27,13 +27,14 @@ $(window).scroll(function () {
 	var scrollbarLocation = $(this).scrollTop();
 
 	scrollLink.each(function () {
-
-		var sectionOffset = $(this.hash).offset().top - 90;
-
-		// if (sectionOffset <= scrollbarLocation) {
-			// $(this).parent().addClass('active');
-			$(this).parent().siblings().removeClass('active');
-		// }
+		var section = $(this.hash);
+		if (section.length) {
+			var sectionOffset = section.offset().top - 90;
+			if (sectionOffset <= scrollbarLocation) {
+				$(this).parent().addClass('active');
+				$(this).parent().siblings().removeClass('active');
+			}
+		}
 	});
 });
 //jQuery for page scrolling feature - requires jQuery Easing plugin
@@ -88,10 +89,12 @@ if ($('.mobile-menu').length) {
 /*=============================================
 	=          Click TO section               =
 =============================================*/
-$(".header-btn a").on('click', function() {
-    $('html, body').animate({
-        scrollTop: $("#shop").offset().top
-    }, 1200, "easeInOutExpo");
+$(".header-btn a").on('click', function () {
+	if ($("#shop").length) {
+		$('html, body').animate({
+			scrollTop: $("#shop").offset().top
+		}, 1200, "easeInOutExpo");
+	}
 });
 
 
@@ -151,11 +154,11 @@ $(window).on('scroll', function () {
 if ($('.scroll-to-target').length) {
   $(".scroll-to-target").on('click', function () {
     var target = $(this).attr('data-target');
-    // animate
-    $('html, body').animate({
-      scrollTop: $(target).offset().top
-    }, 1000);
-
+    if ($(target).length) {
+        $('html, body').animate({
+            scrollTop: $(target).offset().top
+        }, 1000);
+    }
   });
 }
 
